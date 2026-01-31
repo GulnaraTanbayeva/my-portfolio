@@ -1,5 +1,7 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // If you are deploying a static site, no special config is needed.
+  // Railway will serve the 'dist' folder.
+  outDir: "./dist",
+});
