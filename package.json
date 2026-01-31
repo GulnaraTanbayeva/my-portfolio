@@ -12,5 +12,8 @@
   "dependencies": {
     "astro": "^5.17.1",
     "typescript": "5.9.3"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*"
   }
 }
