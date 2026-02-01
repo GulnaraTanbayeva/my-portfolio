@@ -49,6 +49,7 @@ const projects = [
 
 <html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="utf-8" />
 		<title>Projects | {name}</title>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
@@ -165,11 +166,6 @@ const projects = [
     opacity: 0.3;
 }
 
-@media (max-width: 1024px) {
-    .stack-grid { grid-template-columns: 1fr; }
-    .stack-title { font-size: 2.5rem; }
-}
-
 			body { 
 				margin: 0; 
 				font-family: 'Montserrat', sans-serif; 
@@ -201,8 +197,8 @@ const projects = [
 
 			.timeline-container { padding-top: 150px; }
 			.hero-header { text-align: center; }
-			.mode-tag { color: var(--accent-pink); letter-spacing: 5px; font-size: 0.7rem; }
-			h1 { font-family: 'Playfair Display', serif; font-size: 5vw; font-style: italic; margin-top: 10px; }
+			.mode-tag { color: var(--accent-pink); letter-spacing: 5px; font-size: 0.7rem; font-weight: 700; }
+			h1 { font-family: 'Playfair Display', serif; font-size: 5vw; font-style: italic; margin-top: 20px; }
 
 			.vertical-track { position: relative; max-width: 1400px; margin: 0 auto; }
 			
@@ -282,12 +278,61 @@ const projects = [
 			}
 			.view-btn:hover { letter-spacing: 2px; color: var(--accent-pink); }
 
-			@media (max-width: 1024px) {
-				.main-line { left: 40px; }
-				.year-marker { left: 40px; transform: translateY(-50%); }
-				.year-number { font-size: 5rem; }
-				.project-info, .project-slice:nth-child(even) .project-info { width: 75%; margin-left: 100px; text-align: left; }
-			}
+			/* Tablet Adjustments */
+@media (max-width: 1024px) {
+    .main-line { left: 40px; }
+    .year-marker { left: 40px; transform: translateY(-50%); }
+    .year-number { font-size: 6rem; }
+    .project-info, .project-slice:nth-child(even) .project-info { 
+        width: 75%; 
+        margin-left: 100px; 
+        margin-right: 0;
+        text-align: left; 
+    }
+	.stack-grid {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Phone Specific Fixes (The "Smallness" Fix) */
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 20px;
+    }
+    
+    .top-nav a { font-size: 0.65rem; }
+    .drive-cta { padding: 6px 12px; }
+
+    .timeline-container { padding-top: 100px; }
+    
+    h1 { font-size: 2.5rem; }
+    
+    .stack-section { padding: 20px; }
+    .stack-card { padding: 25px 20px; }
+    .stack-card h3 { font-size: 0.7rem; }
+    .stack-card p { font-size: 0.85rem; }
+
+    .main-line { left: 20px; }
+    .year-marker { left: 20px; }
+    .year-number { font-size: 4rem; opacity: 0.1; }
+    
+    .project-info, .project-slice:nth-child(even) .project-info {
+        width: 80%;
+        margin-left: 50px;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    h2 { font-size: 1.8rem; }
+    .desc { font-size: 0.95rem; line-height: 1.6; }
+    .role-label { font-size: 0.6rem; }
+    
+    .project-slice {
+        min-height: auto;
+        padding: 60px 0;
+    }
+}
 		</style>
 	</body>
 </html>
