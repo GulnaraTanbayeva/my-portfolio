@@ -1,338 +1,466 @@
 ---
 const name = "Gulnara Tanbayeva";
-const portfolioLink = "https://gulnaratanbayeva.notion.site/Gulnara-Tanbayeva-214ae3e92a7780b29142f48566e62569?pvs=143"; 
-const resumeLink = "https://drive.google.com/file/d/1YChNFncufHpO71P0xXjulcIIdtFbpEvt/view?usp=sharing";
+const portfolioLink =
+  "https://gulnaratanbayeva.notion.site/Gulnara-Tanbayeva-214ae3e92a7780b29142f48566e62569?pvs=143";
+const resumeLink =
+  "https://drive.google.com/file/d/1YChNFncufHpO71P0xXjulcIIdtFbpEvt/view?usp=sharing";
 
 const projects = [
   {
     year: "2026",
     title: "BEHAVIORAL ANALYTICS AT BI GROUP",
     role: "Data Analyst Intern",
-    description: "Analyzing user behavior and journey paths using Amplitude and Yandex Metrics. Currently replacing static reporting with dynamic Python visualizations through Manim.",
+    description:
+      "Analyzing user behavior and journey paths using Amplitude and Yandex Metrics. Currently replacing static reporting with dynamic Python visualizations through Manim.",
     tech: "Amplitude • Yandex Metrics • Manim",
-    link: "https://bi.group/ru/education"
+    link: "https://bi.group/ru/education",
   },
   {
     year: "2025",
     title: "AGRIFUNDING ARCHITECTURE",
     role: "Full-Stack Developer",
-    description: "Built the complete web architecture for Agrifunding.org. Managed high-load PostgreSQL databases and integrated AI models for land analysis.",
+    description:
+      "Built the complete web architecture for Agrifunding.org. Managed high-load PostgreSQL databases and integrated AI models for land analysis.",
     tech: "React • Django • PostgreSQL • AWS",
-    link: "https://agrifunding.org"
+    link: "https://agrifunding.org",
   },
   {
     year: "2025",
     title: "INTERACTIVE DESIGN @EVENTAGRATE",
     role: "Ventuz Interactive Designer",
-    description: "Created 3D models in Blender and motion graphics in Cinema4D. Developed interactive applications and background designs for IDLE using Ventuz.",
+    description:
+      "Created 3D models in Blender and motion graphics in Cinema4D. Developed interactive applications and background designs for IDLE using Ventuz.",
     tech: "Ventuz • Blender • Cinema 4D",
-    link: "https://www.eventagrate.com/"
+    link: "https://www.eventagrate.com/",
   },
   {
     year: "2025",
     title: "AI-DRIVEN CULINARY SYSTEMS",
     role: "FlutterFlow App Developer",
-    description: "Developed RestroMaster and MyCulinaryExplorer. Handled full-cycle production from UI/UX design in Figma to AppStore deployment.",
+    description:
+      "Developed RestroMaster and MyCulinaryExplorer. Handled full-cycle production from UI/UX design in Figma to AppStore deployment.",
     tech: "FlutterFlow • Supabase • AI Analysis",
-    link: "https://apps.apple.com/kz/app/myculinaryexplorer/id6746160146" 
+    link: "https://apps.apple.com/kz/app/myculinaryexplorer/id6746160146",
   },
   {
     year: "2022",
     title: "AI FACE & VOICE RESEARCH",
     role: "Machine Learning Researcher",
-    description: "International collaboration with SDU. Developed biometric identification models using TensorFlow, successfully defended at HOF University, Germany.",
+    description:
+      "International collaboration with SDU. Developed biometric identification models using TensorFlow, successfully defended at HOF University, Germany.",
     tech: "TensorFlow • Python • ML Research",
-    link: "https://www.hof-university.de"
-  }
+    link: "https://www.hof-university.de",
+  },
 ];
 ---
 
 <html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-		<title>Projects | {name}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<nav class="top-nav">
-			<a href="/" class="exit-link">← HOME</a>
-			<div class="links"> 
-				<a href={portfolioLink} target="_blank" class="drive-cta">Portfolio ↗</a>
-				<a href={resumeLink} target="_blank" class="drive-cta">CV ↗</a>
-			</div>
-		</nav>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Projects | {name}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a href="/" class="exit-link">← HOME</a>
+      <div class="links">
+        <a href={portfolioLink} target="_blank" class="drive-cta">Portfolio ↗</a
+        >
+        <a href={resumeLink} target="_blank" class="drive-cta">CV ↗</a>
+      </div>
+    </nav>
 
-		<main class="timeline-container">
-			<header class="hero-header">
-				<span class="mode-tag">TIME MODE</span>
-				<h1>Project Odyssey</h1>
-			</header>
-			<section class="stack-section">				
-				    <div class="stack-grid">
-				        <div class="stack-card">
-				            <h3>Data & Analysis</h3>
-				            <p>Python (Pandas, NumPy) • Amplitude • Yandex Metrics • Manim • SQL</p>
-				        </div>
-				        <div class="stack-card">
-				            <h3>Development</h3>
-				            <p>React • Django Framework • FlutterFlow • Supabase • PostgreSQL • AWS</p>
-				        </div>
-				        <div class="stack-card">
-				            <h3>Design & Interactive</h3>
-				            <p>Ventuz • Blender 3D • Cinema 4D • Figma • Adobe InDesign</p>
-				        </div>
-				    </div>
-				</section>
-			<div class="vertical-track">
-				<div class="main-line"></div>				
-				{projects.map((p, index) => (
-					<section class="project-slice">
-						<div class="year-marker">
-							<span class="year-number">{p.year}</span>
-							<div class="node"></div>
-						</div>
-						
-						<div class="project-info">
-							<span class="role-label">{p.role}</span>
-							<h2>{p.title}</h2>
-							<p class="desc">{p.description}</p>
-							<p class="stack">{p.tech}</p>
-							<a href={p.link} target="_blank" class="view-btn">EXPLORE ↗</a>
-						</div>
-					</section>
-				))}
-			</div>
-		</main>
+    <main class="timeline-container">
+      <header class="hero-header">
+        <span class="mode-tag">TIME MODE</span>
+        <h1>Project Odyssey</h1>
+      </header>
+      <section class="stack-section">
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h3>Data & Analysis</h3>
+            <p>
+              Python (Pandas, NumPy) • Amplitude • Yandex Metrics • Manim • SQL
+            </p>
+          </div>
+          <div class="stack-card">
+            <h3>Development</h3>
+            <p>
+              React • Django Framework • FlutterFlow • Supabase • PostgreSQL •
+              AWS
+            </p>
+          </div>
+          <div class="stack-card">
+            <h3>Design & Interactive</h3>
+            <p>Ventuz • Blender 3D • Cinema 4D • Figma • Adobe InDesign</p>
+          </div>
+        </div>
+      </section>
+      <div class="vertical-track">
+        <div class="main-line"></div>
+        {
+          projects.map((p, index) => (
+            <section class="project-slice">
+              <div class="year-marker">
+                <div class="node" />
+                <span class="year-number">{p.year}</span>
+              </div>
 
-		<style>
-			:root {
-				--accent-pink: #fbcfe8;
-				--deep-pink: #db2777;
-			}
-			/* Tech Stack Styling */
-.stack-section {
-    padding: 40px 60px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+              <div class="project-info">
+                <span class="role-label">{p.role}</span>
+                <h2>{p.title}</h2>
+                <p class="desc">{p.description}</p>
+                <p class="stack">{p.tech}</p>
+                <a href={p.link} target="_blank" class="view-btn">
+                  EXPLORE ↗
+                </a>
+              </div>
+            </section>
+          ))
+        }
+      </div>
+    </main>
 
-.stack-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin: 20px 0 60px;
-}
+    <style>
+      :root {
+        --accent-pink: #fbcfe8;
+        --deep-pink: #db2777;
+      }
+      /* Tech Stack Styling */
+      .stack-section {
+        padding: 40px 60px;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-.stack-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
+      .stack-title {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        margin: 20px 0 60px;
+      }
 
-.stack-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(251, 207, 232, 0.1);
-    padding: 40px 30px;
-    border-radius: 15px;
-    transition: 0.4s;
-}
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
 
-.stack-card:hover {
-    background: rgba(251, 207, 232, 0.05);
-    border-color: var(--accent-pink);
-    transform: translateY(-10px);
-}
+      .stack-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(251, 207, 232, 0.1);
+        padding: 40px 30px;
+        border-radius: 15px;
+        transition: 0.4s;
+      }
 
-.stack-card h3 {
-    color: var(--accent-pink);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
+      .stack-card:hover {
+        background: rgba(251, 207, 232, 0.05);
+        border-color: var(--accent-pink);
+        transform: translateY(-10px);
+      }
 
-.stack-card p {
-    color: #bdbdbd;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
+      .stack-card h3 {
+        color: var(--accent-pink);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
 
-.footer-line {
-    width: 1px;
-    height: 80px;
-    background: var(--accent-pink);
-    margin: 0 auto 40px;
-    opacity: 0.3;
-}
+      .stack-card p {
+        color: #bdbdbd;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
 
-			body { 
-				margin: 0; 
-				font-family: 'Montserrat', sans-serif; 
-				background-color: #1a1a1a;
-				color: white; 
-				overflow-x: hidden;
-			}
+      .footer-line {
+        width: 1px;
+        height: 80px;
+        background: var(--accent-pink);
+        margin: 0 auto 40px;
+        opacity: 0.3;
+      }
 
-			.top-nav {
-				position: fixed;
-				top: 0; left: 0;
-				width: 100%;
-				padding: 30px 60px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				z-index: 100;
-				background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-				box-sizing: border-box; 
-				pointer-events: none;
-			}
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #1a1a1a;
+        color: white;
+        overflow-x: hidden;
+      }
 
-			.exit-link, .links { pointer-events: auto; }
-			.top-nav a { color: var(--accent-pink); text-decoration: none; font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
-			
-			.links { display: flex; flex-direction: row; gap: 15px; }
-			.drive-cta { border: 1px solid var(--accent-pink); padding: 8px 20px; border-radius: 5px; transition: 0.3s; }
-			.drive-cta:hover { background: var(--accent-pink); color: #1a1a1a; }
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+        box-sizing: border-box;
+        pointer-events: none;
+      }
 
-			.timeline-container { padding-top: 150px; }
-			.hero-header { text-align: center; }
-			.mode-tag { color: var(--accent-pink); letter-spacing: 5px; font-size: 0.7rem; font-weight: 700; }
-			h1 { font-family: 'Playfair Display', serif; font-size: 5vw; font-style: italic; margin-top: 20px; }
+      .exit-link,
+      .links {
+        pointer-events: auto;
+      }
+      .top-nav a {
+        color: var(--accent-pink);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
 
-			.vertical-track { position: relative; max-width: 1400px; margin: 0 auto; }
-			
-			.main-line {
-				position: absolute;
-				left: 50%; top: 0; bottom: 0;
-				width: 1px;
-				background: rgba(251, 207, 232, 0.3);
-				z-index: 1;
-			}
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+      }
+      .drive-cta {
+        border: 1px solid var(--accent-pink);
+        padding: 8px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .drive-cta:hover {
+        background: var(--accent-pink);
+        color: #1a1a1a;
+      }
 
-			.project-slice {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				min-height: 90vh;
-				position: relative;
-				z-index: 2;
-			}
+      .timeline-container {
+        padding-top: 150px;
+      }
+      .hero-header {
+        text-align: center;
+      }
+      .mode-tag {
+        color: var(--accent-pink);
+        letter-spacing: 5px;
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 5vw;
+        font-style: italic;
+        margin-top: 20px;
+      }
 
-			.year-marker {
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%); /* Centers perfectly behind node */
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				pointer-events: none;
-			}
+      .vertical-track {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
-			.year-number {
-				font-size: 10rem;
-				font-family: 'Playfair Display', serif;
-				font-weight: 700;
-				opacity: 0.15;
-				color: var(--accent-pink);
-				line-height: 1;
-			}
+      .main-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: rgba(251, 207, 232, 0.3);
+        z-index: 1;
+      }
 
-			.node {
-				width: 14px;
-				height: 14px;
-				background: white;
-				border-radius: 50%;
-				box-shadow: 0 0 25px var(--accent-pink);
-				position: relative;
-				z-index: 10;
-			}
+      .project-slice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+        position: relative;
+        z-index: 2;
+      }
 
-			.project-info {
-				width: 38%;
-				margin-left: 55%; 
-				text-align: left;
-			}
+      .year-marker {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Centers perfectly behind node */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+      }
 
-			.project-slice:nth-child(even) .project-info {
-				margin-left: 0;
-				margin-right: 55%;
-				text-align: right;
-			}
+      .year-number {
+        font-size: 10rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        opacity: 0.15;
+        color: var(--accent-pink);
+        line-height: 1;
+      }
 
-			.role-label { color: var(--accent-pink); font-size: 0.7rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; }
-			h2 { font-size: 2.8rem; margin: 15px 0; line-height: 1.1; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-			.desc { color: #bdbdbd; line-height: 1.8; font-size: 1.05rem; margin-bottom: 25px; }
-			.stack { font-size: 0.85rem; color: var(--accent-pink); font-weight: 700; letter-spacing: 1px; }
+      .node {
+        width: 14px;
+        height: 14px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 25px var(--accent-pink);
+        position: relative;
+        z-index: 10;
+      }
 
-			.view-btn {
-				display: inline-block;
-				margin-top: 30px;
-				color: white;
-				text-decoration: none;
-				font-weight: 700;
-				border-bottom: 2px solid var(--accent-pink);
-				padding-bottom: 5px;
-				transition: 0.3s;
-			}
-			.view-btn:hover { letter-spacing: 2px; color: var(--accent-pink); }
-
-			/* Tablet Adjustments */
-@media (max-width: 1024px) {
-    .main-line { left: 40px; }
-    .year-marker { left: 40px; transform: translateY(-50%); }
-    .year-number { font-size: 6rem; }
-    .project-info, .project-slice:nth-child(even) .project-info { 
-        width: 75%; 
-        margin-left: 100px; 
-        margin-right: 0;
-        text-align: left; 
-    }
-	.stack-grid {
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-/* Phone Specific Fixes (The "Smallness" Fix) */
-@media (max-width: 768px) {
-    .top-nav {
-        padding: 20px;
-    }
-    
-    .top-nav a { font-size: 0.65rem; }
-    .drive-cta { padding: 6px 12px; }
-
-    .timeline-container { padding-top: 100px; }
-    
-    h1 { font-size: 2.5rem; }
-    
-    .stack-section { padding: 20px; }
-    .stack-card { padding: 25px 20px; }
-    .stack-card h3 { font-size: 0.7rem; }
-    .stack-card p { font-size: 0.85rem; }
-
-    .main-line { left: 20px; }
-    .year-marker { left: 20px; }
-    .year-number { font-size: 4rem; opacity: 0.1; }
-    
-    .project-info, .project-slice:nth-child(even) .project-info {
-        width: 80%;
-        margin-left: 50px;
-        margin-right: 0;
+      .project-info {
+        width: 38%;
+        margin-left: 55%;
         text-align: left;
-    }
+      }
 
-    h2 { font-size: 1.8rem; }
-    .desc { font-size: 0.95rem; line-height: 1.6; }
-    .role-label { font-size: 0.6rem; }
-    
-    .project-slice {
-        min-height: auto;
-        padding: 60px 0;
-    }
-}
-		</style>
-	</body>
+      .project-slice:nth-child(even) .project-info {
+        margin-left: 0;
+        margin-right: 55%;
+        text-align: right;
+      }
+
+      .role-label {
+        color: var(--accent-pink);
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 2.8rem;
+        margin: 15px 0;
+        line-height: 1.1;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+      .desc {
+        color: #bdbdbd;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        margin-bottom: 25px;
+      }
+      .stack {
+        font-size: 0.85rem;
+        color: var(--accent-pink);
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .view-btn {
+        display: inline-block;
+        margin-top: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        border-bottom: 2px solid var(--accent-pink);
+        padding-bottom: 5px;
+        transition: 0.3s;
+      }
+      .view-btn:hover {
+        letter-spacing: 2px;
+        color: var(--accent-pink);
+      }
+
+      /* Tablet Adjustments */
+      @media (max-width: 1024px) {
+        .main-line {
+          left: 40px;
+        }
+        .year-marker {
+          left: 13px;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: row;
+        }
+        .year-number {
+          font-size: 10rem;
+        }
+        .project-info,
+        .project-slice:nth-child(even) .project-info {
+          width: 75%;
+          margin-left: 100px;
+          margin-right: 0;
+          text-align: left;
+        }
+        .stack-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      /* Phone Specific Fixes (The "Smallness" Fix) */
+      @media (max-width: 768px) {
+        .top-nav {
+          padding: 20px;
+        }
+
+        .top-nav a {
+          font-size: 0.65rem;
+        }
+        .drive-cta {
+          padding: 6px 12px;
+        }
+
+        .timeline-container {
+          padding-top: 100px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .stack-section {
+          padding: 20px;
+        }
+        .stack-card {
+          padding: 25px 20px;
+        }
+        .stack-card h3 {
+          font-size: 0.7rem;
+        }
+        .stack-card p {
+          font-size: 0.85rem;
+        }
+
+        .main-line {
+          left: 20px;
+        }
+        .year-marker {
+          left: 13px;
+        }
+        .year-number {
+          font-size: 10rem;
+          opacity: 0.1;
+        }
+
+        .project-info,
+        .project-slice:nth-child(even) .project-info {
+          width: 80%;
+          margin-left: 50px;
+          margin-right: 0;
+          text-align: left;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+        .desc {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+        .role-label {
+          font-size: 0.6rem;
+        }
+
+        .project-slice {
+          min-height: auto;
+          padding: 60px 0;
+        }
+      }
+    </style>
+  </body>
 </html>
