@@ -31,9 +31,9 @@ const resumeLink = "https://docs.google.com/document/d/1IrupD6AWzK_47Z9pmybdQ0Zl
 				<div class="side-label">ENDURANCE</div>
 				<div class="details">
 					<span class="section-number">01</span>
-					<h2>21KM & Counting</h2>
+					<h2>Run & Swim</h2>
 					<p class="desc">
-						Running is my meditation. Currently training for my next half-marathon, I focus on the discipline of the long-distance grind. I am a consistent finisher of <strong>charity marathons</strong>.
+						Running and swimming are my meditation. Currently training for my next half-marathon and spending regular hours in the pool, I focus on the discipline of the long-distance grind. I am a consistent finisher of <strong>charity marathons</strong>.
 					</p>
 				</div>
 				<div class="image-proof">
@@ -87,6 +87,36 @@ const resumeLink = "https://docs.google.com/document/d/1IrupD6AWzK_47Z9pmybdQ0Zl
 				</div>
 				<div class="image-proof">
 					<img src="/debate.png" alt="Debate Proof" />
+				</div>
+			</section>
+
+			<section class="content-slice alternate">
+				<div class="side-label">VOICE</div>
+				<div class="details">
+					<span class="section-number">05</span>
+					<h2>Finding My Voice</h2>
+					<p class="desc">
+						Since February 2026 I have been taking <strong>vocal lessons</strong>. Singing teaches me breath control, patience and the courage to perform, skills that carry straight into presenting and leading a team.
+					</p>
+				</div>
+				<div class="image-proof has-placeholder">
+					<span class="image-placeholder">Voice</span>
+					<img src="/vocal.jpg" alt="Vocal Proof" onerror="this.remove()" />
+				</div>
+			</section>
+
+			<section class="content-slice">
+				<div class="side-label">ART</div>
+				<div class="details">
+					<span class="section-number">06</span>
+					<h2>ART Society</h2>
+					<p class="desc">
+						A member of the <strong>ART Society</strong> club. I explore exhibitions, discuss art with people from different fields and look for inspiration that shapes how I think about design and storytelling.
+					</p>
+				</div>
+				<div class="image-proof has-placeholder">
+					<span class="image-placeholder">Art</span>
+					<img src="/art.jpg" alt="Art Society Proof" onerror="this.remove()" />
 				</div>
 			</section>
 
@@ -163,6 +193,9 @@ const resumeLink = "https://docs.google.com/document/d/1IrupD6AWzK_47Z9pmybdQ0Zl
 			.image-proof { flex: 1; overflow: hidden; border-radius: 10px; height: 400px; background: #222; }
 			.image-proof img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%) contrast(1.1); transition: 0.5s; }
 			.image-proof:hover img { filter: grayscale(0%); transform: scale(1.05); }
+			.image-proof.has-placeholder { position: relative; }
+			.image-proof.has-placeholder img { position: relative; z-index: 1; }
+			.image-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); color: var(--accent-pink); opacity: 0.6; }
 
 			.section-number { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--accent-pink); opacity: 0.5; font-style: italic; }
 			h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.5rem); margin: 10px 0 20px; font-weight: 700; color: var(--accent-pink); }
