@@ -30,9 +30,16 @@ const email = "gulnaratanbayeva@gmail.com";
 						<span class="greeting">Hello! I am </span>
 						<h1>{name}</h1>
 						
-						<p class="subtitle">
-							<strong>IT Project Lead</strong> at AI Tanym · <strong>Project Management</strong> & <strong>Analytics</strong>
-						</p>
+						<div class="roles">
+							<div class="role-line">
+								<span class="role-title">IT Project Lead</span>
+								<span class="role-at">@ <a href="https://aitanym.kz" target="_blank">AI Tanym</a></span>
+							</div>
+							<div class="role-line">
+								<span class="role-title">Product Manager</span>
+								<span class="role-at">@ <a href="https://agrifunding.org" target="_blank">AgriFunding</a></span>
+							</div>
+						</div>
 
 						<div class="contact-grid">
 							<div class="contact-item">
@@ -125,7 +132,7 @@ const email = "gulnaratanbayeva@gmail.com";
 				gap: 30px; 
 				justify-content: flex-end; 
 				right: 60px;
-				margin-bottom: 60px;
+				margin-bottom: 40px;
 			}
 
 			.top-nav a { 
@@ -156,16 +163,14 @@ const email = "gulnaratanbayeva@gmail.com";
 				font-size: 0.8rem; 
 			}
 
-			.subtitle { 
-				font-size: 1.1rem; 
-				margin-bottom: 30px; 
-				color: var(--text-muted);
-			}
+			.roles { margin: 20px 0 30px; display: flex; flex-direction: column; gap: 10px; }
+			.role-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+			.role-title { color: var(--accent-pink); font-weight: 400; font-size: 1.05rem; }
+			.role-at { color: var(--text-muted); font-weight: 400; }
+			.role-at a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(251,207,232,0.4); transition: 0.3s; }
+			.role-at a:hover { color: var(--accent-pink); }
 
-			.subtitle strong {
-				color: var(--accent-pink);
-				font-weight: 400;
-			}
+
 
 			.contact-grid { 
 				display: grid; 
@@ -237,7 +242,8 @@ const email = "gulnaratanbayeva@gmail.com";
 				.links { flex-direction: column; align-items: center; } 
 				h1 { font-size: 2.5rem; text-align: center; }
 				.greeting { text-align: center; display: block; }
-				.subtitle { text-align: center; }
+				.roles { align-items: center; }
+				.role-line { justify-content: center; text-align: center; }
 				.contact-grid { text-align: center;
         display: flex;
         flex-direction: column; }
